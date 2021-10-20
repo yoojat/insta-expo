@@ -32,7 +32,7 @@ export default function LogIn({ route: { params } }) {
       await logUserIn(token);
     }
   };
-  const [logInMutation, { loading }] = useMutation(LOG_IN_MUTATION, {
+  const [logInMutation, { loading, error }] = useMutation(LOG_IN_MUTATION, {
     onCompleted,
   });
   const onNext = (nextOne) => {
