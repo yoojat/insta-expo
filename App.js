@@ -40,12 +40,6 @@ export default function App() {
     }
     await persister.purge();
 
-    await persistCache({
-      cache,
-      storage: new AsyncStorageWrapper(AsyncStorage),
-      // serialize: false,
-    });
-
     return preloadAssets();
   };
   if (loading) {
